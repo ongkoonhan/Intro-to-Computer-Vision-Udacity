@@ -1,7 +1,7 @@
 import cv2 as cv
 
 
-def print_image_details_and_show(img, chart_title='image', show=True):
+def print_image_details_and_show(img, chart_title, show=True):
     print(img.dtype)
     print(img.shape)
 
