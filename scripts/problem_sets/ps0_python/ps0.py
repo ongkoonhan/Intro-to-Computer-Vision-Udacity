@@ -98,6 +98,7 @@ cv.imwrite(img_path, img_1_green_normalized)
 rows, cols = img_1_green.shape
 
 # Translate in x direction by -2 (shift left)
+# Translation matrix (augmented matrix)
 translation_matx = np.float32([ [1,0,-2],
                                 [0,1,0] ])
 img_1_green_left = img_1_green.copy()
@@ -118,15 +119,48 @@ img_path = os.path.join(output_folder, "ps0-4-d-1.png")
 cv.imwrite(img_path, img_1_green_diff)
 
 
+# Q5
+# (a)
+show_img_loop = False
+for stddev in range(10,101,10):
+    img_1_green_noise_gauss = img_1_green.copy()
+    noise_gauss_green = np.zeros(shape=img_1_green_noise_gauss.shape, dtype=np.uint8)
+    noise_gauss_green = cv.randn(noise_gauss_green, mean=0, stddev=stddev)
+
+    img_1_green_noise_gauss = cv.add(img_1_green_noise_gauss, noise_gauss_green)
+    img_1_noise_green = img_1.copy()
+    img_1_noise_green[:,:,1] = img_1_green_noise_gauss
+
+    utils.print_image_details_and_show(img_1_noise_green, "green_noise, stddev: {0}".format(stddev), show_img_loop)
 
 
+selected_stddev = 50
+img_1_green_noise_gauss = img_1_green.copy()
+noise_gauss_green = np.zeros(shape=img_1_green_noise_gauss.shape, dtype=np.uint8)
+noise_gauss_green = cv.randn(noise_gauss_green, mean=0, stddev=selected_stddev)
+
+img_1_green_noise_gauss = cv.add(img_1_green_noise_gauss, noise_gauss_green)
+img_1_noise_green = img_1.copy()
+img_1_noise_green[:,:,1] = img_1_green_noise_gauss
+
+utils.print_image_details_and_show(img_1_noise_green, "green_noise, stddev: {0}".format(selected_stddev), show_img)
+
+img_path = os.path.join(output_folder, "ps0-5-a-1.png")
+cv.imwrite(img_path, img_1_noise_green)
 
 
+# (b)
+img_1_blue_noise_gauss = img_1[:,:,0].copy()   # BGR
+noise_gauss_blue = noise_gauss_green.copy()
 
+img_1_blue_noise_gauss = cv.add(img_1_blue_noise_gauss, noise_gauss_blue)
+img_1_noise_blue = img_1.copy()
+img_1_noise_blue[:,:,0] = img_1_blue_noise_gauss
 
+utils.print_image_details_and_show(img_1_noise_green, "green_noise, stddev: {0}".format(selected_stddev), show_img)
 
-
-
+img_path = os.path.join(output_folder, "ps0-5-b-1.png")
+cv.imwrite(img_path, img_1_noise_blue)
 
 
 
