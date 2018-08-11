@@ -48,23 +48,23 @@ Implementation details
 ### Q5. Circle Detection    
 
 **Canny Edge Image**        
-![img](output/ps1-5-a-2.png)
+<p><img src="output/ps1-5-a-2.png" alt="img" width="60%"></p>
 
 **Circle Hough Transform (parameter space)**    
 Peaks are in boxes      
-![img](output/ps1-5-a-2-misc.png)
+<p><img src="output/ps1-5-a-2-misc.png" alt="img" width="60%"></p>      
 
 **Circles Drawn**       
-![img](output/ps1-5-b-1.png)
+<p><img src="output/ps1-5-b-1.png" alt="img" width="60%"></p>
 
 
 ### Q6 & 7. Image With Clutter
 
 **Line Detection**      
-![img](output/ps1-6-a-1.png)
+<p><img src="output/ps1-6-a-1.png" alt="img" width="60%"></p>       
 
 **Keeping Only Nearby Parallel Lines**      
-![img](output/ps1-6-c-1.png)
+<p><img src="output/ps1-6-c-1.png" alt="img" width="60%"></p>       
 
 ```
 From Q6(c)
@@ -98,13 +98,13 @@ Original image had contrast increased by 50% and brightness reduced by 50 to emp
 Note how the edge of the bottom left coin (near the pen tip) is emphasized against its own shadow 
 
 ###### Original Image
-![img](output/ps1-7-a-1_misc0_original_image.png)
+<p><img src="output/ps1-7-a-1_misc0_original_image.png" alt="img" width="60%"></p>      
 
 ###### Contrast Adjusted Image
-![img](output/ps1-7-a-1_misc1_high_contrast_smoothed.png)
+<p><img src="output/ps1-7-a-1_misc1_high_contrast_smoothed.png" alt="img" width="60%"></p>      
 
 **Circle Canny Edge Image**     
-![img](output/ps1-7-a-1_misc2_edges_with_blobs.png)
+<p><img src="output/ps1-7-a-1_misc2_edges_with_blobs.png" alt="img" width="60%"></p>        
 
 **"Blob" Removal**      
 The high density of edges around the right side of the Canny Edge image will "confuse" the circle detection procedure as the mess of edges easily form a broken circle        
@@ -113,11 +113,11 @@ The following steps help remove this "blob" of edges
 * The blurred image intensity values are then re-normalized and subtracted from the original Canny Edge image
 * The brightest areas are where the "blobs" are
 
-![img](output/ps1-7-a-1_misc3_edges_blured.png)     
-![img](output/ps1-7-a-1_misc4_edges_no_blobs.png)       
+<p><img src="output/ps1-7-a-1_misc3_edges_blured.png" alt="img" width="60%"></p>    
+<p><img src="output/ps1-7-a-1_misc4_edges_no_blobs.png" alt="img" width="60%"></p>           
 
 **Circle Detection After "Blob" Removal**       
-![img](output/ps1-7-a-1.png)
+<p><img src="output/ps1-7-a-1.png" alt="img" width="60%"></p>       
 
 
 ### Q8. Distorted Image
@@ -127,12 +127,13 @@ The challenge of this image is that the image is distorted (projected) at an ang
 Line detection (keeping only nearby parallel lines) and circle detection was applied to the distorted image     
  
 Circle detection faced the most problems with the circles being distorted into elipses. As seen from the following image, parts of the coin circumferences barely fit into a circle.           
-![img](output/ps1-8-a-1.png)
+<p><img src="output/ps1-8-a-1.png" alt="img" width="60%"></p>
 
 **Combining Overlapping Circles**
 
 To overcome this problem, overlapping circles were kept and combined while stand-alone circle were removed.     
-![img](output/ps1-8-c-1.png)
+<p><img src="output/ps1-8-c-1.png" alt="img" width="60%"></p>       
+
 ```
 From Q8(c)
 Big circles with one or more significantly overlapping smaller circles are combined.
