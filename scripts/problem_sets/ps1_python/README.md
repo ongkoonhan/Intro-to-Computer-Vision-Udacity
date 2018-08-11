@@ -47,23 +47,23 @@ Implementation details
 
 ### Q5. Circle Detection    
 
-**Canny Edge Image**
+**Canny Edge Image**        
 ![img](output/ps1-5-a-2.png)
 
 **Circle Hough Transform (parameter space)**    
-Peaks are in boxes
+Peaks are in boxes      
 ![img](output/ps1-5-a-2-misc.png)
 
-**Circles Drawn**
+**Circles Drawn**       
 ![img](output/ps1-5-b-1.png)
 
 
 ### Q6 & 7. Image With Clutter
 
-**Line Detection**
+**Line Detection**      
 ![img](output/ps1-6-a-1.png)
 
-**Keeping Only Nearby Parallel Lines** 
+**Keeping Only Nearby Parallel Lines**      
 ![img](output/ps1-6-c-1.png)
 
 ```
