@@ -103,19 +103,19 @@ Note how the edge of the bottom left coin (near the pen tip) is emphasized again
 ###### Contrast Adjusted Image
 ![img](output/ps1-7-a-1_misc1_high_contrast_smoothed.png)
 
-**Circle Canny Edge Image**
+**Circle Canny Edge Image**     
 ![img](output/ps1-7-a-1_misc2_edges_with_blobs.png)
 
-**"Blob" Removal**  
+**"Blob" Removal**      
 The high density of edges around the right side of the Canny Edge image will "confuse" the circle detection procedure as the mess of edges easily form a broken circle        
 The following steps help remove this "blob" of edges
 * A gaussian blur filter was applied onto the Canny Edge image
 * The blurred image intensity values are then re-normalized and subtracted from the original Canny Edge image
 * The brightest areas are where the "blobs" are
-![img](output/ps1-7-a-1_misc3_edges_blured.png)
-![img](output/ps1-7-a-1_misc4_edges_no_blobs.png)
+![img](output/ps1-7-a-1_misc3_edges_blured.png)     
+![img](output/ps1-7-a-1_misc4_edges_no_blobs.png)       
 
-**Circle Detection After "Blob" Removal**
+**Circle Detection After "Blob" Removal**       
 ![img](output/ps1-7-a-1.png)
 
 
@@ -125,12 +125,12 @@ The challenge of this image is that the image is distorted (projected) at an ang
 
 Line detection (keeping only nearby parallel lines) and circle detection was applied to the distorted image     
  
-Circle detection faced the most problems with the circles being distorted into elipses. As seen from the following image, parts of the coin circumferences barely fit into a circle.   
+Circle detection faced the most problems with the circles being distorted into elipses. As seen from the following image, parts of the coin circumferences barely fit into a circle.           
 ![img](output/ps1-8-a-1.png)
 
 **Combining Overlapping Circles**
 
-To overcome this problem, overlapping circles were kept and combined while stand-alone circle were removed.
+To overcome this problem, overlapping circles were kept and combined while stand-alone circle were removed.     
 ![img](output/ps1-8-c-1.png)
 ```
 From Q8(c)
