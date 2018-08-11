@@ -585,7 +585,7 @@ for i in range(len_idx):
         centers_dist = np.linalg.norm(np.subtract(big_c_cen, small_c_cen))
 
         # Check if more than half of the smaller circle is in the bigger circle
-        if centers_dist < (big_c_rad - 0.5*small_c_rad):
+        if centers_dist < big_c_rad:
             circle_combine_list.append(small_c_idx)
             sorted_radii_idx[j] = -1   # Smaller circle will not be checked again
 
