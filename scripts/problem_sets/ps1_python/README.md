@@ -48,7 +48,7 @@ Implementation details
 ### Q5. Circle Detection    
 
 **Canny Edge Image**        
-![img](output/ps1-5-a-2.png)
+![img|10%](output/ps1-5-a-2.png)
 
 **Circle Hough Transform (parameter space)**    
 Peaks are in boxes      
