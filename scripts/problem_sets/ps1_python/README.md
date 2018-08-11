@@ -112,6 +112,7 @@ The following steps help remove this "blob" of edges
 * A gaussian blur filter was applied onto the Canny Edge image
 * The blurred image intensity values are then re-normalized and subtracted from the original Canny Edge image
 * The brightest areas are where the "blobs" are
+
 ![img](output/ps1-7-a-1_misc3_edges_blured.png)     
 ![img](output/ps1-7-a-1_misc4_edges_no_blobs.png)       
 
