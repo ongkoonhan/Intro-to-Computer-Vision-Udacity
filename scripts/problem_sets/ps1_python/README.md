@@ -97,10 +97,10 @@ peaks_arr = peaks_arr[np.asarray(tuple(parallel_lines_set))]
 Original image had contrast increased by 50% and brightness reduced by 50 to emphasize edges of the objects to be detected.     
 Note how the edge of the bottom left coin (near the pen tip) is emphasized against its own shadow 
 
-###### Original Image
+#### Original Image
 <p><img src="output/ps1-7-a-1_misc0_original_image.png" alt="img" width="60%"></p>      
 
-###### Contrast Adjusted Image
+#### Contrast Adjusted Image
 <p><img src="output/ps1-7-a-1_misc1_high_contrast_smoothed.png" alt="img" width="60%"></p>      
 
 **Circle Canny Edge Image**     
